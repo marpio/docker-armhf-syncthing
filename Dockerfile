@@ -1,6 +1,6 @@
-FROM resin/rpi-raspbian:wheezy-2015-09-02
+FROM resin/rpi-raspbian:latest
 
-ENV VERSION v0.14.9
+ENV VERSION v0.14.23
 
 RUN useradd -m syncthing
 
@@ -24,7 +24,7 @@ WORKDIR /home/syncthing
 RUN mkdir -p /home/syncthing/Sync && chown -R syncthing /home/syncthing/Sync
 RUN mkdir -p /home/syncthing/.config/syncthing && chown -R syncthing /home/syncthing/.config/syncthing
 
-VOLUME ["/home/syncthing/.config/syncthing", "/home/syncthing/Sync"]
+VOLUME ["/home/syncthing/.config/syncthing", "/home/syncthing/Sync", "/home/syncthing/Tel1", "/home/syncthing/Tel2"]
 
 EXPOSE 8384 22000 21025/udp
 

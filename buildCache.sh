@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-docker build --rm -t adrienbrault/armhf-syncthing .
+docker build --rm -t marpio/armhf-syncthing .
